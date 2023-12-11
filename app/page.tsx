@@ -37,17 +37,9 @@ const Home = () => {
     }
   };
 
-  // Read the selected institution from localStorage on component mount
-  useEffect(() => {
-    const storedInstitution = localStorage.getItem("selectedInstitution");
-    if (storedInstitution) {
-      const url = JSON.parse(storedInstitution);
-      setSelectedInstitution(JSON.parse(storedInstitution));
-      router.push(url.url);
-    }
-  }, []);
   if (typeof window !== "undefined") {
     const storedInstitution = localStorage.getItem("selectedInstitution");
+
     if (!storedInstitution) {
       return (
         <div className="min-w-screen min-h-screen flex flex-col items-center justify-center">
@@ -87,7 +79,8 @@ const Home = () => {
         </div>
       );
     } else {
-      return <></>;
+      const url = JSON.parse(storedInstitution);
+      return router.push(url.url);
     }
   } else {
     return <></>;
