@@ -52,7 +52,10 @@ const Home = () => {
       return (
         <>
           {typeof window !== "undefined" && (
-            <div className="min-w-screen min-h-screen flex flex-col items-center justify-center">
+            <div
+              key={5}
+              className="min-w-screen min-h-screen flex flex-col items-center justify-center"
+            >
               <motion.div
                 animate={{
                   opacity: [1, 0],
@@ -66,7 +69,7 @@ const Home = () => {
               <div className="w-11/12 max-w-md flex flex-col items-center justify-center text-center bg-[#0577fb] rounded-xl  p-4 relative">
                 <motion.h4
                   animate={{
-                    y: [0, -250],
+                    y: [0, -300],
                     scale: [1.2, 1],
                   }}
                   transition={{ duration: 1.5, delay: 2 }}
@@ -75,7 +78,7 @@ const Home = () => {
                   <BsStack className="w-12 h-12 text-blue-600 pr-2 text-white" />{" "}
                   Edustack
                 </motion.h4>
-                <div className="w-[300px] h-[300px] my-8">
+                <div className="w-[300px] h-[300px] my-12">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 2000 2000"
@@ -315,7 +318,7 @@ const Home = () => {
                     </g>
                   </svg>
                 </div>
-                <p className="text-white">
+                <p className="text-[#fafafa] ">
                   Welcome, Please select your Institution to Continue!
                 </p>
                 <Select
@@ -336,15 +339,12 @@ const Home = () => {
                     </Option>
                   ))}
                 </Select>
-                <Button
-                  type="primary"
-                  className="bg-white text-blue-600 hover:bg-white hover:text-blue-600 "
-                  size="large"
-                  block
+                <button
+                  className="bg-[#fafafa] w-full text-blue-600 hover:bg-[#fafafa] hover:text-blue-600 p-2 rounded-lg"
                   onClick={handleContinue}
                 >
                   Continue
-                </Button>
+                </button>
               </div>
             </div>
           )}
