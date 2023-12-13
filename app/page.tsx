@@ -1,10 +1,9 @@
 "use client";
 import { useState, useEffect } from "react";
-import { Select, Button } from "antd";
+import { Select } from "antd";
 import { BsStack } from "react-icons/bs";
 import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
-import Image from "next/image";
 
 const { Option } = Select;
 
@@ -60,7 +59,7 @@ const Home = () => {
                 animate={{
                   opacity: [1, 0],
                 }}
-                transition={{ duration: 1, delay: 3.5 }}
+                transition={{ duration: 0.5, delay: 1.5 }}
                 className={`absolute top-0 left-0 w-full h-full bg-[#0577fb] ${
                   isAnimationComplete ? "z-0" : "z-10"
                 }`}
@@ -72,7 +71,7 @@ const Home = () => {
                     y: [0, -300],
                     scale: [1.2, 1],
                   }}
-                  transition={{ duration: 1.5, delay: 2 }}
+                  transition={{ duration: 1.5, delay: 1 }}
                   className="font-poppins flex flex-row  my-4 font-semibold  text-[28px] text-white mt-3 absolute top-50 left-50 z-50 "
                 >
                   <BsStack className="w-12 h-12 text-blue-600 pr-2 text-white" />{" "}
