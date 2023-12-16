@@ -34,7 +34,7 @@ const Home = () => {
       );
 
       // Redirect to the selected institution's URL
-      router.push(selectedInstitution.url);
+      router.refresh();
     }
   };
 
