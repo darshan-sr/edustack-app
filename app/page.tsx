@@ -74,9 +74,10 @@ const Home = () => {
                   transition={{ duration: 1.5, delay: 1.5 }}
                   className="font-poppins flex flex-row  my-4 font-semibold  text-[28px] text-gray-900 mt-3 absolute top-50 left-50 z-50 "
                 >
-                  <BsStack className="w-12 h-12 text-[#0577fb] pr-2 text-white" />{" "}
-                  Edustack
+                  <BsStack className="w-12 h-12 text-[#0577fb] pr-2 " />{" "}
+                  <span className=""> Edustack </span>
                 </motion.h4>
+
                 <div className="w-[300px] h-[300px] my-12">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
