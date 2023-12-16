@@ -59,22 +59,22 @@ const Home = () => {
                 animate={{
                   opacity: [1, 0],
                 }}
-                transition={{ duration: 0.5, delay: 1.5 }}
-                className={`absolute top-0 left-0 w-full h-full bg-[#0577fb] ${
+                transition={{ duration: 0.5, delay: 2 }}
+                className={`absolute top-0 left-0 w-full h-full bg-[#fafafa] ${
                   isAnimationComplete ? "z-0" : "z-10"
                 }`}
                 onAnimationComplete={handleAnimationComplete}
               />
-              <div className="w-11/12 max-w-md flex flex-col items-center justify-center text-center bg-[#0577fb] rounded-xl  p-4 relative">
+              <div className="w-11/12 max-w-md flex flex-col items-center justify-center text-center bg-[#fafafa] rounded-xl  p-4 relative">
                 <motion.h4
                   animate={{
                     y: [0, -300],
                     scale: [1.2, 1],
                   }}
-                  transition={{ duration: 1.5, delay: 1 }}
-                  className="font-poppins flex flex-row  my-4 font-semibold  text-[28px] text-white mt-3 absolute top-50 left-50 z-50 "
+                  transition={{ duration: 1.5, delay: 1.5 }}
+                  className="font-poppins flex flex-row  my-4 font-semibold  text-[28px] text-gray-900 mt-3 absolute top-50 left-50 z-50 "
                 >
-                  <BsStack className="w-12 h-12 text-blue-600 pr-2 text-white" />{" "}
+                  <BsStack className="w-12 h-12 text-[#0577fb] pr-2 text-white" />{" "}
                   Edustack
                 </motion.h4>
                 <div className="w-[300px] h-[300px] my-12">
@@ -317,7 +317,7 @@ const Home = () => {
                     </g>
                   </svg>
                 </div>
-                <p className="text-[#fafafa] ">
+                <p className="text-gray-800 ">
                   Welcome, Please select your Institution to Continue!
                 </p>
                 <Select
@@ -339,7 +339,7 @@ const Home = () => {
                   ))}
                 </Select>
                 <button
-                  className="bg-[#fafafa] w-full text-blue-600 hover:bg-[#fafafa] hover:text-blue-600 p-2 rounded-lg"
+                  className="bg-[#0577fb] w-full text-[#fafafa] p-2 rounded-lg"
                   onClick={handleContinue}
                 >
                   Continue
