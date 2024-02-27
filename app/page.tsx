@@ -17,6 +17,11 @@ const institutions: Institution[] = [
     name: "RV Institute of Technology and Management",
     url: "https://rvitm.edu-stack.com",
   },
+    {
+    name: "Vivekanand Institute of Technology",
+    url: "https://vkit.edu-stack.com",
+  },
+
   // Add more institutions if needed
 ];
 
